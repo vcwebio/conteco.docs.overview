@@ -1,12 +1,6 @@
-##### BEGIN image.base/Dockerfile/image-header #####
-FROM vcwebio/conteco.image.wrapper AS wrapper
-FROM vcwebio/conteco.external.bash AS base
-##### END image.base/Dockerfile/image-header #####
-
-##### BEGIN image.base/Dockerfile/conteco #####
-COPY --from=wrapper /conteco/ /conteco/
-ENTRYPOINT ["/conteco/bin/image/wrapper/entrypoint"]
-##### END image.base/Dockerfile/conteco #####
+##### BEGIN image/Dockerfile/image-header #####
+FROM vcwebio/conteco.docs.base AS base
+##### END image/Dockerfile/image-header #####
 
 ##### BEGIN image/Dockerfile/conteco #####
 COPY ./conteco/ /conteco/
@@ -15,27 +9,19 @@ COPY ./ /conteco/repo/
 ##### END image/Dockerfile/conteco #####
 
 ##### BEGIN image/Dockerfile/build-instructions #####
-ENV CONTECO_ENTRYPOINT "bash"
-WORKDIR /conteco/pwd
+
 ##### END image/Dockerfile/build-instructions #####
 
-##### BEGIN image.base/Dockerfile/env-labels-footer #####
-ENV CONTECO_REALM="vcwebio" \
-    CONTECO_ECOSYSTEM="conteco" \
-    CONTECO_TYPE="docs" \
-    CONTECO_NAME="base" \
+##### BEGIN image/Dockerfile/env-labels-footer #####
+ENV CONTECO_NAME="overview" \
     CONTECO_TAG="v1.0.0" \
-    CONTECO_BASE="external.bash" \
-    CONTECO_BUILD="image-base"
-LABEL io.vcweb.schema-version="1.0" \
-      io.vcweb.realm="vcwebio" \
-      io.vcweb.ecosystem="conteco" \
-      io.vcweb.type="docs" \
-      io.vcweb.name="base" \
+    CONTECO_BASE="docs.base" \
+    CONTECO_BUILD="image"
+LABEL io.vcweb.name="overview" \
       io.vcweb.tag="v1.0.0" \
-      io.vcweb.base="external.bash" \
-      io.vcweb.build="image-base" \
-      io.vcweb.label="Conteco Documentation base image" \
-      io.vcweb.description="The base for Conteco documentation image." \
-      io.vcweb.docker.cmd.help="docker run vcwebio/conteco.docs.base --help" 
-##### END image.base/Dockerfile/env-labels-footer #####
+      io.vcweb.base="docs.base" \
+      io.vcweb.build="image" \
+      io.vcweb.label="Overview Documentation" \
+      io.vcweb.description="An overview of the orchestratin platform." \
+      io.vcweb.docker.cmd.help="docker run vcwebio/conteco.docs.overview --help" 
+##### END image/Dockerfile/env-labels-footer #####
