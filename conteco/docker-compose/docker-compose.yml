@@ -1,0 +1,25 @@
+---
+version: '3'
+services:
+
+# START SERVICE docs.base
+  docs:
+    image: ${CONTECO_REGISTRY}${CONTECO_REALM}/${CONTECO_ECOSYSTEM}.${CONTECO_DC_GLOBAL_IMAGE_NAME}
+    environment: [${CONTECO_DC_DOCS_BASE_ENVIRONMENT}] 
+    command: [${CONTECO_DC_DOCS_BASE_COMMAND}]
+    volumes: [${CONTECO_DC_DOCS_BASE_VOLUMES}]
+    ports: [${CONTECO_DC_DOCS_BASE_PORTS}]
+    networks: [${CONTECO_DC_DOCS_BASE_NETWORKS}]
+    deploy:
+      mode: ${CONTECO_DC_DOCS_BASE_DEPLOY_MODE}
+      resources: 
+        limits: 
+          cpus: '${CONTECO_DC_DOCS_BASE_DEPLOY_RESOURCES_LIMITS_CPUS}'
+          memory: '${CONTECO_DC_DOCS_BASE_DEPLOY_RESOURCES_LIMITS_MEMORY}'
+        reservations:
+          cpus: '${CONTECO_DC_DOCS_BASE_DEPLOY_RESOURCES_RESERVATIONS_CPUS}'
+          memory: '${CONTECO_DC_DOCS_BASE_DEPLOY_RESOURCES_RESERVATIONS_MEMORY}'
+# END SERVICE docs.base
+
+volumes: {${CONTECO_DC_GLOBAL_VOLUMES}}
+networks: {${CONTECO_DC_GLOBAL_NETWORKS}}
