@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # START CONFIGURATION
-export CONTECO_DC_GLOBAL_STACKS=''docs.base''
+export CONTECO_DC_GLOBAL_STACKS=''docs.overview''
 # END CONFIGURATION
 
 # START OTHER VARIABLES
