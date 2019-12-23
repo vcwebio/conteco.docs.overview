@@ -1,11 +1,11 @@
 #!/usr/bin/env bash
 
-export CONTECO_LABEL="Overview Documentation"
-export CONTECO_DESCRIPTION="An overview of the orchestratin platform."
+export CONTECO_LABEL="docs.overview - vcWEB Platform"
+export CONTECO_DESCRIPTION="vcWEB Platform: Building Solutions from Container and Module Ecosystems"
 
 export CONTECO_TYPE="docs"
 export CONTECO_NAME="overview"
 export CONTECO_TAG="v1.0.0"
 
-export CONTECO_BASE="docs.base"
+export CONTECO_BASE="image.wrapper"
 export CONTECO_BUILD="image"

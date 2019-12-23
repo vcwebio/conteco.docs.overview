@@ -1,5 +1,5 @@
 ##### BEGIN image/Dockerfile/image-header #####
-FROM vcwebio/conteco.docs.base AS base
+FROM vcwebio/conteco.image.wrapper AS base
 ##### END image/Dockerfile/image-header #####
 
 ##### BEGIN image/Dockerfile/conteco #####
@@ -9,19 +9,20 @@ COPY ./ /conteco/repo/
 ##### END image/Dockerfile/conteco #####
 
 ##### BEGIN image/Dockerfile/build-instructions #####
-
 ##### END image/Dockerfile/build-instructions #####
 
 ##### BEGIN image/Dockerfile/env-labels-footer #####
-ENV CONTECO_NAME="overview" \
+ENV CONTECO_TYPE="docs" \
+    CONTECO_NAME="overview" \
     CONTECO_TAG="v1.0.0" \
-    CONTECO_BASE="docs.base" \
+    CONTECO_BASE="image.wrapper" \
     CONTECO_BUILD="image"
-LABEL io.vcweb.name="overview" \
+LABEL io.vcweb.type="docs" \
+      io.vcweb.name="overview" \
       io.vcweb.tag="v1.0.0" \
-      io.vcweb.base="docs.base" \
+      io.vcweb.base="image.wrapper" \
       io.vcweb.build="image" \
-      io.vcweb.label="Overview Documentation" \
-      io.vcweb.description="An overview of the orchestratin platform." \
-      io.vcweb.docker.cmd.help="docker run vcwebio/conteco.docs.overview --help" 
+      io.vcweb.label="docs.overview - vcWEB Platform" \
+      io.vcweb.description="vcWEB Platform: Building Solutions from Container and Module Ecosystems" \
+      io.vcweb.docker.cmd.help="docker run vcwebio/conteco.docs.overview --help"
 ##### END image/Dockerfile/env-labels-footer #####
