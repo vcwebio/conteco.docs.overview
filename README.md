@@ -9,7 +9,7 @@ __ModEco__
 The module ecosystem is concerned with configuring the applications that installed within the containers of the module. It is managed by __controlplane.modeco__.
 
 __SolEco__  
-Modules are combined together into solution.
+Modules are combined together into solutions.
 
 __InfoMetis__
 Bringing the different layer together under a single umbrella.
