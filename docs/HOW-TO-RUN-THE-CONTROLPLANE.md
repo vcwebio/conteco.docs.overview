@@ -20,13 +20,13 @@ Run:
 
 ```bash
 # linux
-docker run -v $(pwd):/conteco/pwd vcwebio/conteco.controlplane.modeco --interactive boot-commandline linux # optional: sudo
+docker run -v $(pwd):/conteco/pwd vcwebio/conteco.controlplane.modeco --interactive extract-cli linux # optional: sudo
 
 # Windows
-docker run -v %cd%:/conteco/pwd vcwebio/conteco.controlplane.modeco --interactive boot-commandline windows
+docker run -v %cd%:/conteco/pwd vcwebio/conteco.controlplane.modeco --interactive extract-cli windows
 ```
 
-![boot-commandline](./boot-commandline.PNG "boot-commandline")
+![extract-cli](./extract-cli.PNG "extract-cli")
 
 -----
 [`Back to Module`](../README.md) >> [`How To`](../docs/HOW-TO.md) >> How To Run the Controlplane
