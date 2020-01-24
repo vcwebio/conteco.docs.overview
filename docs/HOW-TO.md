@@ -1,18 +1,28 @@
-[`Back to Module`](../README.md) >> How To
+[`Back to docs.overview`](../README.md) >> How To
 
 -----
-The How To pages are system managed and updated whenever the base module is updated by `conteco deploy repo`.
-
 # How To
 
-[__How to Run the Controlplane__](./HOW-TO-RUN-THE-CONTROLPLANE.md)  
-Required folder structure - Extract commandline assets - Start the controlplane
+## Starters
 
+* [__How to Run the Controlplane__](./how-to/HOW-TO-RUN-THE-CONTROLPLANE.md)  
+* [__How to Run a Module__](./how-to/HOW-TO-RUN-A-MODULE.md)  
 
-## How to Manage the Module Repository
+## ContEco
 
-## How to Configure the Base Module
+* How to Create an External Image
+* How to Create a Base Image
+* When to Create a Stack or a Module
+* How to Configure an Image as a Service Stack
 
+## ModEco
+
+* How to Create a Module
+* When to Create a Module Base
+
+## SwarEco
+
+## SolEco
 
 -----
-[`Back to Module`](../README.md) >> How To
+[`Back to docs.overview`](../README.md) >> How To

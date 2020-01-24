@@ -5,7 +5,8 @@ export CONTECO_DESCRIPTION="vcWEB Platform: Building Solutions from Container an
 
 export CONTECO_TYPE="docs"
 export CONTECO_NAME="overview"
-export CONTECO_TAG="v1.0.0"
+export CONTECO_TAG="v1.0.1"
+export CONTECO_TAG_TYPE="incremental"
 
 export CONTECO_BASE="image.wrapper"
 export CONTECO_BUILD="image"

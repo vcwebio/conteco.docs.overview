@@ -1,8 +1,6 @@
-[`Back to Module`](../README.md) >> [`How To`](../docs/HOW-TO.md) >> How To Run the Controlplane
+[`Back to docs.overview`](../../README.md) >> [`How To`](../HOW-TO.md) >> How To Run the Controlplane
 
 -----
-The How To pages are system managed and updated whenever the base module is updated by `conteco deploy repo`.
-
 # How to Run the Controlplane
 
 The controlplane for module images is `vcwebio/conteco.controlplane.modeco`.  
@@ -29,4 +27,4 @@ docker run -v %cd%:/conteco/pwd vcwebio/conteco.controlplane.modeco --interactiv
 ![extract-cli](./extract-cli.PNG "extract-cli")
 
 -----
-[`Back to Module`](../README.md) >> [`How To`](../docs/HOW-TO.md) >> How To Run the Controlplane
+[`Back to docs.overview`](../../README.md) >> [`How To`](../HOW-TO.md) >> How To Run the Controlplane
