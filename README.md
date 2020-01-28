@@ -18,9 +18,10 @@ __ContEco__ and __ModEco__ are nearing completion, and development is being star
 
 ## Where to Start
 
-Nothing better than seeing some action. Start up the __ModEco__ controlplane and try out some of the functional modules.  
-See [How to Run the Controlplane](./docs/how-to/HOW-TO-RUN-THE-CONTROLPLANE.md)] and [How to Run a Module](./docs/how-to/HOW-TO-RUN-A-MODULE.md)] for more details.  
-The [How To](./docs/HOW-TO.md) will be the place to go to find practical hands-on information - it is currently under construction.
+Nothing better than seeing some action. Do 'docker run' on the controlplane.cli image and follow the instructions!
+See [How to Run the Controlplane](./docs/how-to/HOW-TO-RUN-THE-CONTROLPLANE.md)] for more details.  
+Run a module to see some UI action - see [How to Run a Module](./docs/how-to/HOW-TO-RUN-A-MODULE.md)] for more details.  
+In general, the [How To](./docs/HOW-TO.md) will be the place to go to find practical hands-on information - it is currently under construction.
 
 ## In A Nutshell
 

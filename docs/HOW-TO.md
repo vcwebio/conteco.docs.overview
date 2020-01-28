@@ -17,8 +17,9 @@
 
 ## ModEco
 
-* How to Create a Module
+* [__How to Create and Configure a Module__](./how-to/HOW-TO-CREATE-AND-CONFIGURE-A-MODULE.md)  
 * When to Create a Module Base
+* [__How to Run a Module__](./how-to/HOW-TO-RUN-A-MODULE.md)  
 
 ## SwarEco
 

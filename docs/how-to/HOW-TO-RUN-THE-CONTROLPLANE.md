@@ -3,28 +3,55 @@
 -----
 # How to Run the Controlplane
 
-The controlplane for module images is `vcwebio/conteco.controlplane.modeco`.  
-The controlplane expects the repository to reside in the following folder structure (base module):  
-`[working folder]/[realm]/modeco.${MODECO_NAME}.base`  
-The `realm` can be an account (GitHub or DockerHub), or the name used to start the controlplane with.
+Interactive use of the controlplane is done using the CLI.  
+The CLI has its own image - controlplane.cli - and it comes with full instructions.
 
-Assuming the standard working folder for conteco `/conteco/pwd`, the mode __elk.base__ module repository of __vcwebio__  must be in `/conteco/pwd/vcwebio/modeco.elk.base`.
+Controlplanes can also be driven by automated processes.
 
-The reason for this is that the controlplane typically operates over multiple repositories identified by their image __type__ and __name__ and prefixed with __realm__ (account) and __ecosystem__.
+## Extraction of the  Controlplane CLI
 
-## Extract Controlplane Commandline Assets
-
-Run:
+Extraction of the CLI scripts is a multistep process which is self-explanatory.  
+Simply create a working folder and open a console.  
+Do 'docker run' on the image and follow the instructions:
 
 ```bash
-# linux
-docker run -v $(pwd):/conteco/pwd vcwebio/conteco.controlplane.modeco --interactive extract-cli linux # optional: sudo
-
-# Windows
-docker run -v %cd%:/conteco/pwd vcwebio/conteco.controlplane.modeco --interactive extract-cli windows
+docker run vcwebio/conteco.controlplane.cli
 ```
 
-![extract-cli](./extract-cli.PNG "extract-cli")
+It will first instruct you how to run the image with required volumes and arguments.  
+Following this it will proceed to generate the script files.
+
+There are additional instructions with regards to the required data volume (v2 only).  
+Under normal use, just continue using the existing volume.
+
+## CLI Command Structure
+
+CLI v1: [controlplane] [section] [[method] [arguments]] [repository selector]
+
+CLI v2: [controlplane] [repository selector] [section] [[method] [arguments]]
+
+## Repository Selection
+
+The CLI allows to work on more than one image repository at a time.  
+
+Repositories are selected using type - CONTECO_TYPE - and name - CONTECO_NAME - only.
+The context supplies the registry prefix - CONTECO_REGISTRY -, the realm - CONTECO_REALM - and the ecosystem - CONTECO_ECOSYSTEM.  
+
+The repository selector allows for prefix wild-carding, there is no need to add * in order to achieve this.  
+However, in order to indicate an exact repository you must end the selector in $.
+
+## API Sections
+
+There is a fixed set of API sections which are the same for all controlplanes.  
+console - repo - config - build - release - deploy - run
+All sections run within the context of an image repository, except for 'console' which is for global actions.  
+
+Note that not all controlplanes implement all sections - e.g. deploy and run.  
+And some sections are the same across all controlplane - repo, build and release.  
+The config section is part inherited and part implemented by each controlplane.
+
+Specific API information for a controlplane can be found in the resp. controlplane repository.  
+For more general information on the controlplane, see information on the ecosystem that a specific controlplane acts upon.
 
 -----
 [`Back to docs.overview`](../../README.md) >> [`How To`](../HOW-TO.md) >> How To Run the Controlplane
