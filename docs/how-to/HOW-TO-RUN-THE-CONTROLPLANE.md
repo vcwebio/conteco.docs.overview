@@ -35,7 +35,7 @@ CLI v2: [controlplane] [repository selector] [section] [[method] [arguments]]
 The CLI allows to work on more than one image repository at a time.  
 
 Repositories are selected using type - CONTECO_TYPE - and name - CONTECO_NAME - only.
-The context supplies the registry prefix - CONTECO_REGISTRY -, the realm - CONTECO_REALM - and the ecosystem - CONTECO_ECOSYSTEM.  
+The context supplies the registry prefix - CONTECO_REGISTRY -, the realm - CONTECO_REALM_RUNTIME - and the ecosystem - CONTECO_ECOSYSTEM_RUNTIME.  
 
 The repository selector allows for prefix wild-carding, there is no need to add * in order to achieve this.  
 However, in order to indicate an exact repository you must end the selector in $.
