@@ -35,4 +35,4 @@ And at every stage there is a controlplane to bring the ecosystem to life.
 Documentation should improve over time, with the main documentation to be found here.  
 More technical documentation can be found within the container image repositories. The most significant for the platform are `conteco.image.wrapper` and the controlplanes, e.g. `conteco.controlplane.conteco` and `conteco.controlplane.modeco`.
 
-All feedback is welcome - conteco@vcweb.io.
+All feedback is welcome - infometis@vcweb.co.
